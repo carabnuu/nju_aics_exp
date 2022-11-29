@@ -1,0 +1,34 @@
+Start init resource
+
+======== inference results: =============
+top 0: class:[daisy]: probability:[0.952814]
+top 1: class:[roses]: probability:[0.026155]
+top 2: class:[tulips]: probability:[0.012045]
+top 3: class:[sunflowers]: probability:[0.008985]
+inference cost time: 43.6ms
+
+
+======== inference results: =============
+top 0: class:[roses]: probability:[0.866238]
+top 1: class:[tulips]: probability:[0.108015]
+top 2: class:[daisy]: probability:[0.023871]
+top 3: class:[sunflowers]: probability:[0.001874]
+inference cost time: 43.4ms
+
+
+======== inference results: =============
+top 0: class:[sunflowers]: probability:[0.997505]
+top 1: class:[tulips]: probability:[0.001051]
+top 2: class:[daisy]: probability:[0.000991]
+top 3: class:[roses]: probability:[0.000452]
+inference cost time: 43.5ms
+
+
+======== inference results: =============
+top 0: class:[tulips]: probability:[0.992164]
+top 1: class:[roses]: probability:[0.007119]
+top 2: class:[sunflowers]: probability:[0.000441]
+top 3: class:[daisy]: probability:[0.000272]
+inference cost time: 43.5ms
+
+Resource destroyed successfully
