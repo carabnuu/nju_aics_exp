@@ -1,0 +1,64 @@
+2022-11-27 00:02:42,365:INFO:Args:
+2022-11-27 00:02:42,365:INFO:--> enable_modelarts: False
+2022-11-27 00:02:42,365:INFO:--> data_url: 
+2022-11-27 00:02:42,365:INFO:--> train_url: 
+2022-11-27 00:02:42,365:INFO:--> checkpoint_url: 
+2022-11-27 00:02:42,365:INFO:--> data_path: /cache/data
+2022-11-27 00:02:42,365:INFO:--> output_path: /cache/train
+2022-11-27 00:02:42,365:INFO:--> load_path: /cache/checkpoint_path
+2022-11-27 00:02:42,365:INFO:--> device_target: Ascend
+2022-11-27 00:02:42,365:INFO:--> need_modelarts_dataset_unzip: False
+2022-11-27 00:02:42,365:INFO:--> num_classes: 5
+2022-11-27 00:02:42,366:INFO:--> lr: 0.01
+2022-11-27 00:02:42,366:INFO:--> lr_init: 0.01
+2022-11-27 00:02:42,366:INFO:--> lr_max: 0.1
+2022-11-27 00:02:42,366:INFO:--> lr_epochs: 30,60,90,120
+2022-11-27 00:02:42,366:INFO:--> lr_scheduler: step
+2022-11-27 00:02:42,366:INFO:--> warmup_epochs: 5
+2022-11-27 00:02:42,366:INFO:--> batch_size: 64
+2022-11-27 00:02:42,366:INFO:--> max_epoch: 400
+2022-11-27 00:02:42,366:INFO:--> momentum: 0.9
+2022-11-27 00:02:42,366:INFO:--> weight_decay: 0.0005
+2022-11-27 00:02:42,367:INFO:--> loss_scale: 1.0
+2022-11-27 00:02:42,367:INFO:--> label_smooth: 0
+2022-11-27 00:02:42,367:INFO:--> label_smooth_factor: 0
+2022-11-27 00:02:42,367:INFO:--> buffer_size: 10
+2022-11-27 00:02:42,367:INFO:--> image_size: [224, 224]
+2022-11-27 00:02:42,367:INFO:--> pad_mode: same
+2022-11-27 00:02:42,367:INFO:--> padding: 0
+2022-11-27 00:02:42,367:INFO:--> has_bias: False
+2022-11-27 00:02:42,367:INFO:--> batch_norm: True
+2022-11-27 00:02:42,367:INFO:--> keep_checkpoint_max: 10
+2022-11-27 00:02:42,367:INFO:--> initialize_mode: XavierUniform
+2022-11-27 00:02:42,367:INFO:--> has_dropout: False
+2022-11-27 00:02:42,367:INFO:--> dataset: flower_photos
+2022-11-27 00:02:42,368:INFO:--> data_dir: ../data
+2022-11-27 00:02:42,368:INFO:--> pre_trained: outputs_flowers/2022-11-11_time_11_54_48/ckpt_0/0-400_45.ckpt
+2022-11-27 00:02:42,368:INFO:--> lr_gamma: 0.1
+2022-11-27 00:02:42,368:INFO:--> eta_min: 0.0
+2022-11-27 00:02:42,368:INFO:--> T_max: 90
+2022-11-27 00:02:42,368:INFO:--> log_interval: 100
+2022-11-27 00:02:42,368:INFO:--> ckpt_path: ./outputs_flowers/
+2022-11-27 00:02:42,368:INFO:--> ckpt_interval: 5
+2022-11-27 00:02:42,368:INFO:--> is_save_on_master: 1
+2022-11-27 00:02:42,368:INFO:--> is_distributed: 0
+2022-11-27 00:02:42,368:INFO:--> per_batch_size: 64
+2022-11-27 00:02:42,368:INFO:--> graph_ckpt: 1
+2022-11-27 00:02:42,368:INFO:--> log_path: ./outputs_flowers/
+2022-11-27 00:02:42,369:INFO:--> result_dir: 
+2022-11-27 00:02:42,369:INFO:--> label_dir: 
+2022-11-27 00:02:42,369:INFO:--> dataset_name: flower_photos
+2022-11-27 00:02:42,369:INFO:--> result_path: ./preprocess_Result/
+2022-11-27 00:02:42,369:INFO:--> ckpt_file: 
+2022-11-27 00:02:42,369:INFO:--> file_name: vgg17
+2022-11-27 00:02:42,369:INFO:--> file_format: MINDIR
+2022-11-27 00:02:42,369:INFO:--> config_path: /home/ma-user/work/nj_u/exp4/teacher/code/flowerphotos_config.yaml
+2022-11-27 00:02:42,369:INFO:--> rank: 0
+2022-11-27 00:02:42,369:INFO:--> group_size: 1
+2022-11-27 00:02:42,369:INFO:--> outputs_dir: ./outputs_flowers/2022-11-27_time_00_02_42
+2022-11-27 00:02:42,369:INFO:--> logger: <LOGGER mindversion (NOTSET)>
+2022-11-27 00:02:42,369:INFO:
+../data False
+data_dir ../data/test
+result:  {'acc': 0.859375}
+1
