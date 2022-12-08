@@ -1,0 +1,2 @@
+exp7 filter=lfs diff=lfs merge=lfs -text
+exp8/student filter=lfs diff=lfs merge=lfs -text

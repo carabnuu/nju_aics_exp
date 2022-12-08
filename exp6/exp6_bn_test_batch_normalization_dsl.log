@@ -1,0 +1,140 @@
+2022-09-21 10:47:20 (18266) - [INFO] [STEP1] [case_design.py] Start to parser testcase json.
+2022-09-21 10:47:20 (18266) - [INFO] Start to create sub test cases for /root/EXP/TestCourseExperiments/exp6/student/test_batch_normalization_dsl.json.
+2022-09-21 10:47:20 (18266) - [WARNING] There is no expect output function in the case json, if no need to compare output data, ignore.
+2022-09-21 10:47:20 (18266) - [INFO] Create 2 sub test cases for Test_BatchNormalizationDSL_001.
+2022-09-21 10:47:20 (18266) - [INFO] [STEP2] [atc_transform_om.py] Generate acl_op.json for atc tools.
+2022-09-21 10:47:20 (18266) - [INFO] File /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/config/acl_op.json generated successfully.
+2022-09-21 10:47:20 (18266) - [INFO] [STEP3] [atc_transform_om.py] Start to convert single op to om model.
+2022-09-21 10:47:20 (18266) - [INFO] ATC command line: cd /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out && atc --singleop=test_data/config/acl_op.json --soc_version=Ascend310 --output=op_models
+2022-09-21 10:47:20 (18266) - [INFO] Execute command: ['atc', '--singleop=test_data/config/acl_op.json', '--soc_version=Ascend310', '--output=op_models']
+b'ATC start working now, please wait for a moment.'
+b'ATC run success, welcome to the next use.'
+2022-09-21 10:47:40 (18266) - [INFO] Atc execute time: 19.181840 s.
+2022-09-21 10:47:40 (18266) - [INFO] Finish to convert single op.
+2022-09-21 10:47:40 (18266) - [INFO] [STEP4] [acl_op_generator.py] Generate testcase test code.
+2022-09-21 10:47:40 (18266) - [INFO] Content appended to /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/src/testcase.cpp successfully.
+2022-09-21 10:47:40 (18266) - [INFO] acl op test code files for specified test cases have been successfully generated.
+2022-09-21 10:47:40 (18266) - [INFO] [STEP5] [acl_op_runner.py] Compile testcase test code.
+2022-09-21 10:47:40 (18266) - [INFO] Start to compile /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL.
+2022-09-21 10:47:40 (18266) - [INFO] Compile command line: cd /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/build/intermediates/host && cmake ../../.. -DCMAKE_CXX_COMPILER=g++ -DCMAKE_SKIP_RPATH=TRUE && make
+2022-09-21 10:47:40 (18266) - [INFO] Execute command: ['cmake', '../../..', '-DCMAKE_CXX_COMPILER=g++', '-DCMAKE_SKIP_RPATH=TRUE']
+b'-- The C compiler identification is GNU 7.5.0'
+b'-- The CXX compiler identification is GNU 7.5.0'
+b'-- Check for working C compiler: /usr/bin/cc'
+b'-- Check for working C compiler: /usr/bin/cc -- works'
+b'-- Detecting C compiler ABI info'
+b'-- Detecting C compiler ABI info - done'
+b'-- Detecting C compile features'
+b'-- Detecting C compile features - done'
+b'-- Check for working CXX compiler: /usr/bin/g++'
+b'-- Check for working CXX compiler: /usr/bin/g++ -- works'
+b'-- Detecting CXX compiler ABI info'
+b'-- Detecting CXX compiler ABI info - done'
+b'-- Detecting CXX compile features'
+b'-- Detecting CXX compile features - done'
+b'/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out'
+b'-- env INC_PATH: /usr/local/Ascend/ascend-toolkit/latest'
+b'-- env LIB_PATH: /usr/local/Ascend/ascend-toolkit/latest/runtime/lib64/stub'
+b'-- set acllib package name: runtime'
+b'-- SOC_VERSION='
+b'-- Configuring done'
+b'-- Generating done'
+b'-- Build files have been written to: /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/build/intermediates/host'
+2022-09-21 10:47:41 (18266) - [INFO] Execute command: ['make']
+b'Scanning dependencies of target main'
+b'[ 12%] Building CXX object src/CMakeFiles/main.dir/op_runner.cpp.o'
+b'[ 25%] Building CXX object src/CMakeFiles/main.dir/main.cpp.o'
+b'[ 37%] Building CXX object src/CMakeFiles/main.dir/common.cpp.o'
+b'[ 50%] Building CXX object src/CMakeFiles/main.dir/op_execute.cpp.o'
+b'[ 62%] Building CXX object src/CMakeFiles/main.dir/op_test.cpp.o'
+b'[ 75%] Building CXX object src/CMakeFiles/main.dir/op_test_desc.cpp.o'
+b'[ 87%] Building CXX object src/CMakeFiles/main.dir/testcase.cpp.o'
+b'[100%] Linking CXX executable ../../../../run/out/main'
+b'[100%] Built target main'
+2022-09-21 10:47:44 (18266) - [INFO] Finish to compile /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL.
+2022-09-21 10:47:44 (18266) - [INFO] [STEP6] [data_generator.py] Generate data for testcase.
+2022-09-21 10:47:44 (18266) - [INFO] Start to generate the input data for Test_BatchNormalizationDSL_001_sub_case_001.
+2022-09-21 10:47:44 (18266) - [INFO] Start to generate the input data for Test_BatchNormalizationDSL_001_sub_case_002.
+2022-09-21 10:47:44 (18266) - [INFO] Generate data execute time: 0.001625 s.
+2022-09-21 10:47:44 (18266) - [INFO] Generate data for testcase in /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data.
+2022-09-21 10:47:44 (18266) - [INFO] [STEP7] [acl_op_runner.py] Start to execute testcase.
+2022-09-21 10:47:44 (18266) - [INFO] Run command line: cd /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out && ./main
+2022-09-21 10:47:44 (18266) - [INFO] Execute command: ['./main']
+b'[=========] Running 2 tests.'
+b'[ Run     ] BatchNormalizationDSL.Test_BatchNormalizationDSL_001_sub_case_001'
+b'[INFO]  Make output directory successfully.'
+b'[INFO]  ------------------Open device[0]------------------'
+b'[INFO]  Open device[0] success'
+b"[INFO]  Set input[0] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_001_input_0.bin' success."
+b"[INFO]  Set input[1] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_001_input_1.bin' success."
+b"[INFO]  Set input[2] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_001_input_2.bin' success."
+b"[INFO]  Set input[3] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_001_input_3.bin' success."
+b"[INFO]  Set input[4] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_001_input_4.bin' success."
+b'[INFO]  Copy input[0] success.'
+b'[INFO]  Copy input[1] success.'
+b'[INFO]  Copy input[2] success.'
+b'[INFO]  Copy input[3] success.'
+b'[INFO]  Copy input[4] success.'
+b'[INFO]  Create stream success.'
+b'[INFO]  Execute BatchNormalizationDSL success.'
+b'[INFO]  Synchronize stream success.'
+b'[INFO]  Copy output[0] success.'
+b'[INFO]  Copy output[1] success.'
+b'[INFO]  Copy output[2] success.'
+b'[INFO]  Output[0]:'
+b'[INFO]  Write output[0] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_001_output_0.bin'
+b'[INFO]  Output[1]:'
+b'[INFO]  Write output[1] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_001_output_1.bin'
+b'[INFO]  Output[2]:'
+b'[INFO]  Write output[2] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_001_output_2.bin'
+b'[INFO]  Run op success'
+b'Result file append successfully.'
+b'[      OK ] BatchNormalizationDSL.Test_BatchNormalizationDSL_001_sub_case_001 ( 168.908 ms )'
+b'[ Run     ] BatchNormalizationDSL.Test_BatchNormalizationDSL_001_sub_case_002'
+b'[INFO]  ------------------Open device[0]------------------'
+b'[INFO]  Open device[0] success'
+b"[INFO]  Set input[0] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_002_input_0.bin' success."
+b"[INFO]  Set input[1] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_002_input_1.bin' success."
+b"[INFO]  Set input[2] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_002_input_2.bin' success."
+b"[INFO]  Set input[3] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_002_input_3.bin' success."
+b"[INFO]  Set input[4] from '/root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/test_data/data/Test_BatchNormalizationDSL_001_sub_case_002_input_4.bin' success."
+b'[INFO]  Copy input[0] success.'
+b'[INFO]  Copy input[1] success.'
+b'[INFO]  Copy input[2] success.'
+b'[INFO]  Copy input[3] success.'
+b'[INFO]  Copy input[4] success.'
+b'[INFO]  Execute BatchNormalizationDSL success.'
+b'[INFO]  Synchronize stream success.'
+b'[INFO]  Copy output[0] success.'
+b'[INFO]  Copy output[1] success.'
+b'[INFO]  Copy output[2] success.'
+b'[INFO]  Output[0]:'
+b'[INFO]  Write output[0] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_002_output_0.bin'
+b'[INFO]  Output[1]:'
+b'[INFO]  Write output[1] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_002_output_1.bin'
+b'[INFO]  Output[2]:'
+b'[INFO]  Write output[2] success. output file = /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/Test_BatchNormalizationDSL_001_sub_case_002_output_2.bin'
+b'[INFO]  Run op success'
+b'Result file append successfully.'
+b'[      OK ] BatchNormalizationDSL.Test_BatchNormalizationDSL_001_sub_case_002 ( 1.59153 ms )'
+b'[=========] Ran 2 tests. ( 170.548 ms total )'
+b'[PASSED] 2 tests.'
+b'[FAILED] 0 tests.'
+2022-09-21 10:47:46 (18266) - [INFO] Testcase execute in Ascend310, cost time: 2.226715 s.
+2022-09-21 10:47:46 (18266) - [INFO] Finish to run /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/main.
+2022-09-21 10:47:46 (18266) - [INFO] Step:------>>>>>> Start to get result <<<<<<------
+2022-09-21 10:47:46 (18266) - [INFO] Find result.txt in /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/BatchNormalizationDSL/run/out/result_files/result.txt.
+2022-09-21 10:47:46 (18266) - [INFO] Case 'Test_BatchNormalizationDSL_001_sub_case_001' run successfully.
+2022-09-21 10:47:46 (18266) - [INFO] Case 'Test_BatchNormalizationDSL_001_sub_case_002' run successfully.
+2022-09-21 10:47:46 (18266) - [INFO] End to get result. Duration:0.00 second.
+========================================================================
+run command: /usr/local/Ascend/ascend-toolkit/latest/python/site-packages/bin/msopst run -i ./test_batch_normalization_dsl.json -soc Ascend310 -out ./out
+------------------------------------------------------------------------
+- test case count: 2
+- success count: 2
+- failed count: 0
+------------------------------------------------------------------------
+========================================================================
+
+2022-09-21 10:47:46 (18266) - [INFO] Process finished!
+2022-09-21 10:47:46 (18266) - [INFO] The st report saved in: /root/EXP/TestCourseExperiments/exp6/student/out/20220921104720/st_report.json.

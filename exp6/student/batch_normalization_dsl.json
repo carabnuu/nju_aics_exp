@@ -1,0 +1,69 @@
+[
+    {
+        "op": "BatchNormalizationDSL",
+        "input_desc": [
+            {
+                "name": "x",
+                "param_type":"required", 
+                "format": ["NC1HWC0"],
+                "type": ["float","float16"]
+            },
+            {
+                "name": "scale",
+                "param_type":"required", 
+                "format": ["ND"],
+                "type": ["float","float"]
+            },
+            {
+                "name": "offset",
+                "param_type":"required", 
+                "format": ["ND"],
+                "type": ["float","float"]
+            },
+            {
+                "name": "mean",
+                "param_type":"optional", 
+                "format": ["ND"],
+                "type": ["float","float"]
+            },
+            {
+                "name": "variance",
+                "param_type":"optional", 
+                "format": ["ND"],
+                "type": ["float","float"]
+            }
+        ],
+        "output_desc": [
+            {
+                "name": "y",
+                "param_type":"required", 
+                "format": ["NC1HWC0"],
+                "type": ["float","float16"]
+            },
+            { 
+                "name": "batch_mean", 
+                "param_type":"required", 
+                "format": ["ND"], 
+                "type": ["float","float"]
+            },
+            { 
+                "name": "batch_variance", 
+                "param_type":"required", 
+                "format": ["ND"], 
+                "type": ["float","float"]
+            }
+        ],
+        "attr": [
+            {
+                "name": "epsilon",
+                "type": "float",
+                "value": 0.0001
+            },
+            {
+                "name": "is_training",
+                "type": "bool",
+                "value": false
+            }
+        ]
+    }
+]
