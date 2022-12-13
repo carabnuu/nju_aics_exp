@@ -1,0 +1,58 @@
+========== Test Start ==========
+Ascend310
+gen
+========== Generate Graph1 Success! ==========
+Build Model1 SUCCESS!
+Save Offline Model1 SUCCESS!
+run success
+
+-------------------------------------------------------------------------
+
+Start init resource
+
+======== inference results: =============
+top 0: class:[daisy]: probability:[0.958008]
+top 1: class:[tulips]: probability:[0.041779]
+top 2: class:[sunflowers]: probability:[0.000069]
+top 3: class:[dandelion]: probability:[0.000033]
+top 4: class:[roses]: probability:[0.000000]
+inference cost time: 9.5ms
+
+
+======== inference results: =============
+top 0: class:[roses]: probability:[1.000000]
+top 1: class:[tulips]: probability:[0.000042]
+top 2: class:[daisy]: probability:[0.000002]
+top 3: class:[dandelion]: probability:[0.000000]
+top 4: class:[sunflowers]: probability:[0.000000]
+inference cost time: 9.3ms
+
+
+======== inference results: =============
+top 0: class:[dandelion]: probability:[0.995117]
+top 1: class:[sunflowers]: probability:[0.002327]
+top 2: class:[tulips]: probability:[0.002193]
+top 3: class:[daisy]: probability:[0.000521]
+top 4: class:[roses]: probability:[0.000002]
+inference cost time: 9.3ms
+
+
+======== inference results: =============
+top 0: class:[sunflowers]: probability:[1.000000]
+top 1: class:[tulips]: probability:[0.000000]
+top 2: class:[roses]: probability:[0.000000]
+top 3: class:[dandelion]: probability:[0.000000]
+top 4: class:[daisy]: probability:[0.000000]
+inference cost time: 9.3ms
+
+
+======== inference results: =============
+top 0: class:[tulips]: probability:[0.998047]
+top 1: class:[roses]: probability:[0.001883]
+top 2: class:[daisy]: probability:[0.000042]
+top 3: class:[sunflowers]: probability:[0.000002]
+top 4: class:[dandelion]: probability:[0.000001]
+inference cost time: 9.3ms
+
+Resource destroyed successfully
+
