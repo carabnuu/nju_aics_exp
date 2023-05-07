@@ -1,0 +1,106 @@
+[2022-09-21 11:07:06] [INFO] No caffe plugin files.
+[2022-09-21 11:07:06] [INFO] Cmake begin.
+-- CMAKE_CURRENT_BINARY_DIR=/root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out
+-- CMAKE_CURRENT_SOURCE_DIR=/root/EXP/TestCourseExperiments/exp6/student/Softmax
+-- ASCEND_TENSOR_COMPILER_INCLUDE=/usr/local/Ascend/ascend-toolkit/latest/include
+-- SYSTEM_NAME=ubuntu
+-- SYSTEM_INFO=ubuntu_x86_64
+-- RUN_TARGET=custom_opp_ubuntu_x86_64.run
+-- OUT_DIR=/root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/makepkg
+-- OP_COMMON_INC=
+-- SRCS = ./tensorflow_softmax_plugin.cc
+-- OP_PROTO_TARGET=cust_op_proto
+-- OUTPUT_FILES=aic-ascend310-ops-info.json
+-- operation system is Linux
+-- AICPU_CONFIG_INFO_FLAG=
+-- ALL_MODULES=cust_op_proto;optiling;config_json;cust_tf_parsers
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out
+[2022-09-21 11:07:06] [INFO] Make begin.
+Scanning dependencies of target cust_op_proto
+no source to make liboptiling.so
+Scanning dependencies of target cust_tf_parsers
+[ 20%] generate configure json file
+[ 20%] Built target optiling
+python3 /root/EXP/TestCourseExperiments/exp6/student/Softmax/cmake/util/parse_ini_to_json.py /root/EXP/TestCourseExperiments/exp6/student/Softmax/tbe/op_info_cfg/ai_core/ascend310/softmax.ini  /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/makepkg/packages/op_impl/custom/ai_core/tbe/config/aic-ascend310-ops-info.json
+[ 40%] Building CXX object op_proto/CMakeFiles/cust_op_proto.dir/softmax.cc.o
+[ 60%] Building CXX object framework/tf_plugin/CMakeFiles/cust_tf_parsers.dir/tensorflow_softmax_plugin.cc.o
+
+
+==============check valid for ops info start==============
+==============check valid for ops info end================
+
+
+Compile op info cfg successfully.
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/tbe/op_info_cfg/ai_core /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/makepkg/packages/framework/custom/tensorflow/
+[INFO] Succed generated /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/makepkg/packages/framework/custom/tensorflow//npu_supported_ops.json
+[ 60%] Built target config_json
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc: In function ‘ge::graphStatus ge::SoftmaxVerify(ge::op::Softmax)’:
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:11:56: warning: ‘ge::TensorDesc ge::Operator::GetOutputDesc(const string&) const’ is deprecated: Please use TensorDesc GetOutputDescByName(const char_t *) const instead. [-Wdeprecated-declarations]
+     TensorDesc tensordesc_output = op.GetOutputDesc("y");
+                                                        ^
+In file included from /usr/local/Ascend/ascend-toolkit/latest/include/graph/operator_reg.h:25:0,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.h:21,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:1:
+/usr/local/Ascend/ascend-toolkit/latest/include/graph/operator.h:176:14: note: declared here
+   TensorDesc GetOutputDesc(const std::string &name) const;
+              ^~~~~~~~~~~~~
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:12:51: warning: ‘ge::TensorDesc ge::Operator::GetInputDesc(const string&) const’ is deprecated: Please use TensorDesc GetInputDescByName(const char_t *) const instead. [-Wdeprecated-declarations]
+     tensordesc_output.SetShape(op.GetInputDesc("x").GetShape());   //更新输出的shape
+                                                   ^
+In file included from /usr/local/Ascend/ascend-toolkit/latest/include/graph/operator_reg.h:25:0,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.h:21,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:1:
+/usr/local/Ascend/ascend-toolkit/latest/include/graph/operator.h:149:14: note: declared here
+   TensorDesc GetInputDesc(const std::string &name) const;
+              ^~~~~~~~~~~~
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:13:54: warning: ‘ge::TensorDesc ge::Operator::GetInputDesc(const string&) const’ is deprecated: Please use TensorDesc GetInputDescByName(const char_t *) const instead. [-Wdeprecated-declarations]
+     tensordesc_output.SetDataType(op.GetInputDesc("x").GetDataType()); //更新输出的type
+                                                      ^
+In file included from /usr/local/Ascend/ascend-toolkit/latest/include/graph/operator_reg.h:25:0,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.h:21,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:1:
+/usr/local/Ascend/ascend-toolkit/latest/include/graph/operator.h:149:14: note: declared here
+   TensorDesc GetInputDesc(const std::string &name) const;
+              ^~~~~~~~~~~~
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:14:52: warning: ‘ge::TensorDesc ge::Operator::GetInputDesc(const string&) const’ is deprecated: Please use TensorDesc GetInputDescByName(const char_t *) const instead. [-Wdeprecated-declarations]
+     tensordesc_output.SetFormat(op.GetInputDesc("x").GetFormat()); //更新输出的格式
+                                                    ^
+In file included from /usr/local/Ascend/ascend-toolkit/latest/include/graph/operator_reg.h:25:0,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.h:21,
+                 from /root/EXP/TestCourseExperiments/exp6/student/Softmax/op_proto/softmax.cc:1:
+/usr/local/Ascend/ascend-toolkit/latest/include/graph/operator.h:149:14: note: declared here
+   TensorDesc GetInputDesc(const std::string &name) const;
+              ^~~~~~~~~~~~
+[ 80%] Linking CXX shared library ../../makepkg/packages/framework/custom/tensorflow/libcust_tf_parsers.so
+[ 80%] Built target cust_tf_parsers
+[100%] Linking CXX shared library ../makepkg/packages/op_proto/custom/libcust_op_proto.so
+[100%] Built target cust_op_proto
+Scanning dependencies of target custom_opp_ubuntu_x86_64.run
+/root/EXP/TestCourseExperiments/exp6/student/Softmax/tbe/op_info_cfg/ai_core /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/framework/op_info_cfg/ai_core
+[INFO] Succed generated /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out/framework/op_info_cfg/ai_core/npu_supported_ops.json
+Header is 659 lines long
+
+About to compress 160 KB of data...
+Adding files to archive named "custom_opp_ubuntu_x86_64.run"...
+./help.sh
+./install.sh
+./packages/framework/custom/tensorflow/libcust_tf_parsers.so
+./packages/framework/custom/tensorflow/npu_supported_ops.json
+./packages/fusion_rules/custom/
+./packages/op_impl/custom/ai_core/tbe/config/ascend310/aic-ascend310-ops-info.json
+./packages/op_impl/custom/ai_core/tbe/custom_impl/softmax.py
+./packages/op_impl/custom/ai_core/tbe/op_tiling/
+./packages/op_impl/custom/cpu/aicpu_kernel/custom_impl/
+./packages/op_impl/custom/vector_core/tbe/custom_impl/softmax.py
+./packages/op_proto/custom/libcust_op_proto.so
+./uninstall.sh
+./upgrade.sh
+CRC: 3753561679
+SHA256: 7a9e2586853d093d1e3bf2a6c215a7e298e1526aa78513c12d8ea994e00076f9
+Skipping md5sum at user request
+
+Self-extractable archive "custom_opp_ubuntu_x86_64.run" successfully created.
+[100%] Built target custom_opp_ubuntu_x86_64.run
+[2022-09-21 11:07:08] [INFO] Build successfully, the target is in /root/EXP/TestCourseExperiments/exp6/student/Softmax/build_out.

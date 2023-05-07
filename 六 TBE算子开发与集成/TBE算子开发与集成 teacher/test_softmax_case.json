@@ -1,0 +1,50 @@
+[
+    {
+        "case_name": "Test_Softmax_001",
+        "op": "Softmax",
+        "input_desc": [
+            {
+                "format": [
+                    "ND"
+                ],
+                "type": [
+                    "float16",
+                    "float"
+                ],
+                "shape": [1,5],
+                "data_distribute": [
+                    "uniform"
+                ],
+                "value_range": [
+                    [
+                        0.1,
+                        1.0
+                    ]
+                ],
+                "name": "x"
+            }
+        ],
+        "output_desc": [
+            {
+                "format": [
+                    "ND"
+                ],
+                "type": [
+                    "float16",
+                    "float"
+                ],
+                "shape": [1,5],
+                "name": "y"
+            }
+        ],
+        "attr": [
+            {
+                "name": "axis",
+                "type": "list_int",
+                "value": [
+                    -1
+                ]
+            }
+        ]
+    }
+]

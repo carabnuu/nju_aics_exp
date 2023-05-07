@@ -1,0 +1,58 @@
+------------------------------
+Image processed successfully
+------------------------------
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/g++
+-- Check for working CXX compiler: /usr/bin/g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- env INC_PATH: /usr/local/Ascend/ascend-toolkit/latest
+-- env LIB_PATH: /usr/local/Ascend/ascend-toolkit/latest/acllib/lib64/stub
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/EXP/deploy/build/intermediates/host
+Scanning dependencies of target main
+[ 50%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[100%] Linking CXX executable /root/EXP/deploy/main
+[100%] Built target main
+make for app MyFirstApp Successfully
+------------------------------
+Start inference
+
+Start Inference ./data/daisy_demo.bin
+top 0: class[daisy] probability[0.952637]
+top 1: class[roses] probability[0.026199]
+top 2: class[tulips] probability[0.012085]
+top 3: class[sunflowers] probability[0.008987]
+Infer cost time: 0.264000 ms
+
+Start Inference ./data/roses_demo.bin
+top 0: class[roses] probability[0.866211]
+top 1: class[tulips] probability[0.108032]
+top 2: class[daisy] probability[0.023865]
+top 3: class[sunflowers] probability[0.001881]
+Infer cost time: 0.181000 ms
+
+Start Inference ./data/sunflowers_demo.bin
+top 0: class[sunflowers] probability[0.997559]
+top 1: class[tulips] probability[0.001055]
+top 2: class[daisy] probability[0.000991]
+top 3: class[roses] probability[0.000452]
+Infer cost time: 0.151000 ms
+
+Start Inference ./data/tulips_demo.bin
+top 0: class[tulips] probability[0.992188]
+top 1: class[roses] probability[0.007118]
+top 2: class[sunflowers] probability[0.000441]
+top 3: class[daisy] probability[0.000272]
+Infer cost time: 0.152000 ms
+------------------------------

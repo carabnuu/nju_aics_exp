@@ -1,0 +1,29 @@
+[
+    {
+        "op": "Softmax",
+        "input_desc": [
+            {
+                "name": "x",						
+                "param_type":"required", 			
+                "format": ["ND"],				
+                "type": ["float","float16"]			
+            }
+        ],
+        "output_desc": [
+            {	
+                "name": "y",						
+                "param_type":"required", 
+                "format": ["ND"],
+                "type": ["float","float16"]
+            }
+        ],
+        "attr": [
+            {
+                "name": "axis",
+                "param_type":"optional",
+                "type": "list_int",
+                "default_value": [-1]
+            }
+        ]
+    }
+]

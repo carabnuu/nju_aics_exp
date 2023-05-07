@@ -1,0 +1,25 @@
+[INFO] Succed generated /root/EXP/TestCourseExperiments/exp6/student/BatchNormalizationDSL/build_out/framework/op_info_cfg/ai_core/npu_supported_ops.json
+Header is 659 lines long
+
+About to compress 160 KB of data...
+Adding files to archive named "custom_opp_ubuntu_x86_64.run"...
+./help.sh
+./install.sh
+./packages/framework/custom/tensorflow/libcust_tf_parsers.so
+./packages/framework/custom/tensorflow/npu_supported_ops.json
+./packages/fusion_rules/custom/
+./packages/op_impl/custom/ai_core/tbe/config/ascend310/aic-ascend310-ops-info.json
+./packages/op_impl/custom/ai_core/tbe/custom_impl/batch_normalization_dsl.py
+./packages/op_impl/custom/ai_core/tbe/op_tiling/
+./packages/op_impl/custom/cpu/aicpu_kernel/custom_impl/
+./packages/op_impl/custom/vector_core/tbe/custom_impl/batch_normalization_dsl.py
+./packages/op_proto/custom/libcust_op_proto.so
+./uninstall.sh
+./upgrade.sh
+CRC: 371923523
+SHA256: 04c9a6ab581f64e96d602f3e3fcaa3d2bb720fe1e780be2a7b51a3801cf969ea
+Skipping md5sum at user request
+
+Self-extractable archive "custom_opp_ubuntu_x86_64.run" successfully created.
+[100%] Built target custom_opp_ubuntu_x86_64.run
+[2022-09-21 10:39:51] [INFO] Build successfully, the target is in /root/EXP/TestCourseExperiments/exp6/student/BatchNormalizationDSL/build_out.

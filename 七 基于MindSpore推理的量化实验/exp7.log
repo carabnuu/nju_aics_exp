@@ -1,0 +1,56 @@
+**************************************************
+Start full inference
+Start inference: ./data/daisy_demo.jpg
+Predict probability: [[0.9528 0.0262 0.009  0.0121]]
+Inference result: True
+
+Start inference: ./data/roses_demo.jpg
+Predict probability: [[0.0238 0.8661 0.0019 0.1082]]
+Inference result: True
+
+Start inference: ./data/sunflowers_demo.jpg
+Predict probability: [[0.001  0.0005 0.9975 0.0011]]
+Inference result: True
+
+Start inference: ./data/tulips_demo.jpg
+Predict probability: [[0.0003 0.0071 0.0004 0.9922]]
+Inference result: True
+
+**************************************************
+Start quantize
+Start inference: ./data/daisy_demo.jpg
+Predict probability: [[0.9531 0.026  0.0082 0.0128]]
+Inference result: True
+
+Start inference: ./data/roses_demo.jpg
+Predict probability: [[0.0206 0.885  0.0017 0.0927]]
+Inference result: True
+
+Start inference: ./data/sunflowers_demo.jpg
+Predict probability: [[0.0007 0.0003 0.9983 0.0007]]
+Inference result: True
+
+Start inference: ./data/tulips_demo.jpg
+Predict probability: [[0.0002 0.0056 0.0004 0.9938]]
+Inference result: True
+
+**************************************************
+Start quantize inference
+Start inference: ./data/daisy_demo.jpg
+Predict probability: [[0.9608 0.0216 0.0072 0.0105]]
+Inference result: True
+
+Start inference: ./data/roses_demo.jpg
+Predict probability: [[0.0186 0.8886 0.0016 0.0912]]
+Inference result: True
+
+Start inference: ./data/sunflowers_demo.jpg
+Predict probability: [[0.0008 0.0003 0.9983 0.0006]]
+Inference result: True
+
+Start inference: ./data/tulips_demo.jpg
+Predict probability: [[0.0002 0.0056 0.0003 0.9938]]
+Inference result: True
+
+
+Process finished with exit code 0
