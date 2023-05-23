@@ -24,21 +24,21 @@ import mindspore
 import mindspore.nn as nn
 from mindspore import Tensor
 from mindspore import context
-from mindspore.communication.management import init, get_rank, get_group_size
-from mindspore.nn.optim.momentum import Momentum
-from mindspore.nn.metrics import Accuracy
-from mindspore.train.callback import ModelCheckpoint, CheckpointConfig, LossMonitor, TimeMonitor,Callback
-from mindspore.train.model import Model
-from mindspore.context import ParallelMode
-from mindspore.train.serialization import load_param_into_net, load_checkpoint
-from mindspore.train.loss_scale_manager import FixedLossScaleManager
-from mindspore.common import set_seed
+from mindspore.communication import init, get_rank, get_group_size
+from mindspore.nn import Momentum
+# from mindspore.nn.metrics import Accuracy
+from mindspore.train import ModelCheckpoint, CheckpointConfig, LossMonitor, TimeMonitor,Callback
+from mindspore.train import Model
+from mindspore import ParallelMode
+from mindspore import load_param_into_net, load_checkpoint
+from mindspore.amp import FixedLossScaleManager
+from mindspore import set_seed
 from src.dataset import resnet_create_dataset
 from src.dataset import classification_dataset
 
 from src.crossentropy import CrossEntropy
 from src.warmup_step_lr import warmup_step_lr
-from src.warmup_cosine_annealing_lr import warmup_cosine_annealing_lr
+from src.lr_generator import get_lr, warmup_cosine_annealing_lr
 from src.warmup_step_lr import lr_steps
 from src.utils.logging import get_logger
 from src.utils.util import get_param_groups

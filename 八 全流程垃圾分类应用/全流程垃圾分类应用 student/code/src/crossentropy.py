@@ -13,11 +13,10 @@
 # limitations under the License.
 # ============================================================================
 """define loss function for network"""
-from mindspore.nn.loss.loss import LossBase
-from mindspore.ops import operations as P
-from mindspore.ops import functional as F
+from mindspore.nn import LossBase
+import mindspore.ops as P 
 from mindspore import Tensor
-from mindspore.common import dtype as mstype
+from mindspore import dtype as mstype
 import mindspore.nn as nn
 
 
