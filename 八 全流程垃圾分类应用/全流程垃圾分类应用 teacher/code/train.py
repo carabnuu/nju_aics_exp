@@ -1,17 +1,3 @@
-# Copyright 2020 Huawei Technologies Co., Ltd
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ============================================================================
 """
 #################train resnet example on garbagephotos########################
 """
@@ -24,21 +10,21 @@ import mindspore
 import mindspore.nn as nn
 from mindspore import Tensor
 from mindspore import context
-from mindspore.communication.management import init, get_rank, get_group_size
-from mindspore.nn.optim.momentum import Momentum
-from mindspore.nn.metrics import Accuracy
-from mindspore.train.callback import ModelCheckpoint, CheckpointConfig, LossMonitor, TimeMonitor,Callback
-from mindspore.train.model import Model
-from mindspore.context import ParallelMode
-from mindspore.train.serialization import load_param_into_net, load_checkpoint
-from mindspore.train.loss_scale_manager import FixedLossScaleManager
-from mindspore.common import set_seed
+from mindspore.communication import init, get_rank, get_group_size
+from mindspore.nn import Momentum
+# from mindspore.nn.metrics import Accuracy
+from mindspore.train import ModelCheckpoint, CheckpointConfig, LossMonitor, TimeMonitor,Callback
+from mindspore.train import Model
+from mindspore import ParallelMode
+from mindspore import load_param_into_net, load_checkpoint
+from mindspore.amp import FixedLossScaleManager
+from mindspore import set_seed
 from src.dataset import resnet_create_dataset
 from src.dataset import classification_dataset
 
 from src.crossentropy import CrossEntropy
 from src.warmup_step_lr import warmup_step_lr
-from src.warmup_cosine_annealing_lr import warmup_cosine_annealing_lr
+from src.lr_generator import get_lr, warmup_cosine_annealing_lr
 from src.warmup_step_lr import lr_steps
 from src.utils.logging import get_logger
 from src.utils.util import get_param_groups
@@ -47,6 +33,7 @@ from src.seresnet import se_resnet50
 from model_utils.moxing_adapter import config
 from model_utils.moxing_adapter import moxing_wrapper
 from model_utils.device_adapter import get_device_id, get_rank_id, get_device_num
+
 
 
 class EvalCallBack(Callback):
@@ -268,8 +255,8 @@ if __name__ == '__main__':
     config.config_path="garbage_config.yaml"
     config.dataset="garbage_photos"
     config.is_distributed=0
-    config.pre_trained = 'pretrained/0-20_277.ckpt'
-    config.data_dir="../garbage_data/"
+    #config.pre_trained = 'pretrained/0-20_277.ckpt'
+    config.data_dir="../data/"
     config.lr_epochs='30,60,90,120'
     config.image_size='288,288'
     config.per_batch_size='32'

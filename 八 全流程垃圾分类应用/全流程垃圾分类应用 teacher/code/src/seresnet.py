@@ -18,7 +18,7 @@ import numpy as np
 from scipy.stats import truncnorm
 import mindspore.nn as nn
 import mindspore.ops as ops
-import mindspore.common.dtype as mstype
+from mindspore import dtype as mstype
 from mindspore.common.tensor import Tensor
 
 

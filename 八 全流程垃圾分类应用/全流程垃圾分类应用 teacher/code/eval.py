@@ -1,17 +1,4 @@
-# Copyright 2020 Huawei Technologies Co., Ltd
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ============================================================================
+
 """Eval"""
 import os
 import time
@@ -23,16 +10,15 @@ import numpy as np
 import mindspore.nn as nn
 
 from mindspore import Tensor, context
-from mindspore.communication.management import init, get_rank, get_group_size
-from mindspore.train.model import Model
-from mindspore.train.serialization import load_checkpoint, load_param_into_net
-from mindspore.ops import operations as P
-from mindspore.ops import functional as F
-from mindspore.common import dtype as mstype
+from mindspore.communication import init, get_rank, get_group_size
+from mindspore.train import Model
+from mindspore import load_checkpoint, load_param_into_net
+import mindspore.ops as P
+from mindspore import dtype as mstype 
+from mindspore.train import ModelCheckpoint, CheckpointConfig, LossMonitor, TimeMonitor,Callback
 
 from src.utils.logging import get_logger
 from src.seresnet import se_resnet50
-
 from src.dataset import resnet_create_dataset
 from src.dataset import classification_dataset
 
